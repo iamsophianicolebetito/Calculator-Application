@@ -41,7 +41,7 @@ class _MyCalculatorState extends State<MyCalculator> {
   //function that appends the transaction to the file
   void sinkOperation(var operation) {
     var sink = File('texts/history.txt'); //for appending to the file
-    sink.writeAsStringSync('\n ' + operation, mode: FileMode.append);
+    sink.writeAsStringSync(' ' + operation, mode: FileMode.append);
   }
 
   //processes when button is pressed
@@ -54,7 +54,7 @@ class _MyCalculatorState extends State<MyCalculator> {
         result = "0";
         equationFontSize = 38.0;
         resultFontSize = 50.0;
-        sinkOperation("\n\n");
+        sinkOperation("\n");
       } else if (buttonText == "⌫") {
         equationFontSize = 48.0;
         resultFontSize = 38.0;
